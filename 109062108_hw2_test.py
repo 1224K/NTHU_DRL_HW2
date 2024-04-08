@@ -78,7 +78,7 @@ class Agent(object):
         self.frameStack = deque([], maxlen=4)
         self.frameStack.extend([np.zeros((1, 84, 84), dtype=np.float32) for _ in range(4)])
 
-        self.load("/model_3000")
+        self.load("./model_3000")
        
     def act(self, state):
         if np.random.rand() < self.exploration_rate:
