@@ -61,7 +61,7 @@ class Agent(object):
         if use_cuda:
             self.net = self.net.cuda()
 
-        self.exploration_rate = 1
+        self.exploration_rate = 0.1
         self.exploration_rate_decay = 0.9999975
         self.exploration_rate_min = 0.01
         self.curr_step = 0
@@ -77,6 +77,8 @@ class Agent(object):
 
         self.frameStack = deque([], maxlen=4)
         self.frameStack.extend([np.zeros((1, 84, 84), dtype=np.float32) for _ in range(4)])
+
+        self.load("/model_3000")
        
     def act(self, state):
         if np.random.rand() < self.exploration_rate:
