@@ -3,3 +3,4 @@ tqdm
 requests
 argparse
 opencv-python
+matplotlib
