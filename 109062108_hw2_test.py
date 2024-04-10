@@ -76,9 +76,9 @@ class Agent(object):
         self.action = 0
 
         self.init_state_hash = None
-        self.load("./model_4000")
+        self.load("./model_4700")
         # self.timestamp = datetime.datetime.now().strftime("%m%d_%H%M")
-        self.random_seed = 2
+        self.random_seed = 10
        
     def act(self, observation):
         if not self.training:
