@@ -3,4 +3,5 @@ tqdm
 requests
 argparse
 opencv-python
-matplotlib
+torchvision
+# matplotlib
